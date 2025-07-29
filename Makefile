@@ -17,20 +17,20 @@ CFLAGS   = -std=c99 -pedantic -Wall -Wextra -Oz ${CPPFLAGS}
 LDFLAGS  = -fPIC -shared
 CC       = cc
 
-libfunny.so: funny.c
+libgoofy.so: goofy.c
 	${CC} -o $@ ${CFLAGS} ${LDFLAGS} $<
 
-libfunny.so: Makefile
+libgoofy.so: Makefile
 
-install: libfunny.so
+install: libgoofy.so
 	install $< ~/.local/lib
 	./install.py
 
-uninstall: libfunny.so
+uninstall: libgoofy.so
 	rm -rf ~/.local/lib/$<
 	./install.py -u
 
 clean:
-	rm -f libfunny.so
+	rm -f libgoofy.so
 
 .PHONY: install uninstall clean
