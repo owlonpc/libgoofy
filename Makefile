@@ -24,11 +24,11 @@ libgoofy.so: Makefile
 
 install: libgoofy.so
 	install $< ~/.local/lib
-	./install.py
+	./shell-install.py
 
 uninstall: libgoofy.so
 	rm -rf ~/.local/lib/$<
-	./install.py -u
+	./shell-install.py -u
 
 clean:
 	rm -f libgoofy.so
