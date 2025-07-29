@@ -18,8 +18,8 @@ import os
 import sys
 from pathlib import Path
 
-line = "export LD_PRELOAD=/usr/lib/libmimalloc.so"
-fish_line = "set -x LD_PRELOAD /usr/lib/libmimalloc.so"
+line = "export LD_PRELOAD=~/.local/lib/libgoofy.so"
+fish_line = "set -x LD_PRELOAD ~/.local/lib/libgoofy.so"
 
 configs = [
     "~/.bashrc", "~/.bash_profile", "~/.profile",
