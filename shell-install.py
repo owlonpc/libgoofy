@@ -18,8 +18,8 @@ import os
 import sys
 from pathlib import Path
 
-line = "export LD_LIBRARY_PATH=~/.local/lib/:$LD_LIBRARY_PATH\nexport LD_PRELOAD=libgoofy.so:$LD_PRELOAD"
-fish_line = "set -gx LD_LIBRARY_PATH ~/.local/lib $LD_LIBRARY_PATH\nset -gx LD_PRELOAD libgoofy.so $LD_PRELOAD"
+line = "export LD_PRELOAD=$HOME/.local/lib/libgoofy.so:$LD_PRELOAD"
+fish_line = "set -gx LD_PRELOAD $HOME/.local/lib/libgoofy.so $LD_PRELOAD"
 
 configs = [
     "~/.bashrc", "~/.bash_profile", "~/.profile",
